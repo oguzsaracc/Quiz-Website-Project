@@ -1,0 +1,257 @@
+/* Font Part */
+@font-face{
+  font-family: BebasNeue;
+  src: url('../Fonts/BebasNeue.ttf');
+}
+
+@font-face{
+  font-family: Tuffy;
+  src: url('../Fonts/Tuffy.ttf');
+}
+
+@font-face{
+  font-family: TuffyBold;
+  src: url('../Fonts/TuffyBold.ttf');
+}
+
+/* Background Part */
+html {
+  background-image: url("../Images/background.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Verdana, Georgia, Serif; /*Stacking some font-family */
+}
+
+body{
+  margin: 0;
+  font-family: sans-serif; 
+}
+
+#main{
+  width: 900px;
+  color: inherit;
+  margin: 2rem auto;
+  padding-top: 1rem;
+  background-color: rgba(255,255,255, 0.5);
+}
+
+.hide{
+  display:none; /* Hide class for javascript (hiding questions) */
+}
+
+#message{
+/* Text Style Part */
+  font-family: TuffyBold;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #CD4641;
+  
+}
+
+/* Margin & Padding & Border & Text Style Part for each unit */
+.unit {
+  min-height:100px;
+  margin:2rem;
+  padding:5rem 5rem 7rem 5rem;
+  border:5px solid #999999;
+  font-family: Tuffy;
+}
+
+.unit h3{
+  font-size:1.5rem;
+  text-align: center;
+}
+
+.unit h4{
+  font-size:0.9rem;
+  text-align: center;
+}
+
+/* Hero/Starting Screen Part */
+.hero{
+/* Sizing Part */
+  width: 100vw;
+  height: 100vh;
+  
+/* Flexbox Part -- I used to flexbox for easy positioning. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+/* Text Style Part */
+  text-align: center;
+ 
+/* Background Part */
+  background-image: url("../Images/start.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hero h2{
+/* Text Style Part */
+  font-family: BebasNeue;
+  font-size: 12rem;
+  color: #CD4641;
+
+/* Margin Part */
+  margin-top: 0;
+  margin-bottom: 1rem;
+	
+}
+
+.hero .beginButton{
+/* Sizing Part */
+  display: block;
+  width: 200px;
+  
+/* Text Style Part   */
+  font-family: BebasNeue;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  text-decoration: none;
+  background-color: #000000;
+
+/* Padding & Margin Part	 */
+  padding: 0.5rem;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+
+/* Border Part	 */
+  border: 0.5rem solid #CD4641;
+  border-radius: 25px;
+}
+
+.hero-inner p{
+  font-size:1.3rem;
+  font-family:BebasNeue,Verdana, Georgia, Serif;
+  color: #CD4641;
+}
+
+/* Flexbox and Positioning Part for Image Questions 1 and 6 */
+.one ul{
+	list-style-type:none;
+}
+
+.imagePosition1 ul{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.imageQuestion1{
+  text-align: center;
+  border-bottom: 2px dotted #999999;
+  padding-bottom: 30px;
+}
+
+.six ul{
+  list-style-type:none;
+}
+
+.imagePosition6 ul{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.imageQuestion6{
+  text-align: center;
+  border-bottom: 2px dotted #999999;
+  padding-bottom: 30px;
+}
+
+/* Buttons part */
+.pageControl button,#submitButton{
+/* Padding & Margin & Displaying Part  */
+  display:inline-block;
+  padding:1em 1em;
+  margin:0 2em 4em 0;
+  
+/* Box Sizing & Border Part */
+  border-radius:0.15em;
+  box-sizing: border-box;
+  background-color:#CD4641;
+  box-shadow:inset 0 -0.7em 0 -0.25em rgba(1,1,1,0.15);
+  cursor:pointer;
+  
+/* Text Style Part   */
+  text-transform: uppercase;
+  text-decoration:none;
+  font-family:BebasNeue,Tuffy,Verdana, Georgia, Serif;
+  font-size: 1.3rem;
+  font-weight:700;
+  color:#FFFFFF;
+  text-align:center;
+  position:relative
+}
+
+.pageControl button:hover,#submitButton:hover{
+/* Reverse the color - background color   */
+  border-color: rgba(205,70,65,0.82);
+  background-color: #FFFFFF;
+  border-radius:0.25rem;
+  color: #CD4641; 
+  cursor:pointer;
+  
+}
+
+.pageControl{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* Footer part */
+footer{
+/* For here, I used same picture which is I used in starting screen */
+  background-image: url("../Images/start.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+	
+/* Fixing Name,StudentNumber,E-mail Part */
+  font-family: BebasNeue;
+  font-size: 1.6rem;
+  text-align: center;
+  padding-top: 0.5rem;
+  color: #FFFFFF;
+}
+
+footer a{
+  text-decoration: none;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+/* Media Part for Mobile Version */
+
+@media screen and (max-width: 800px){
+  #main{
+    float: none;
+    width: 100%;
+  }
+
+  .unit img{
+	max-width: 100%;
+  }	
+}
+
+/* -	Small touch for fixing to the phone version	- */
+@media screen and (max-width: 500px){
+  #message{
+    font-size:2.3rem;
+  }
+}
+
+/* -	Other Media Part for Bigger Screen	- */
+@media screen and (min-width: 13000px){
+  #container{
+	max-width: 900px;
+  }
+}

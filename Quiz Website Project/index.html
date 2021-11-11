@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	<title>Oguz's Quiz</title>
+	<link rel="stylesheet" href="../OguzSarac_298989_js/Css/style.css">
+  </head>
+  
+  <body>
+   <div id="container">
+	<section class="hero">				<!-- hero-inner -->
+	 <div class="hero-inner">
+	  <h2>Oguz's Quiz!</h2>
+	   <p>Please Enter Your Name Before Begin</p>
+	   <form id="userForm" name="userForm">
+	    <input type="text" name="username">	<!-- Takes user name -->
+	   </form>
+	  <a href="#main" class="beginButton">Click to Begin!</a>
+	 </div>
+	</section>
+	
+	
+    <div id="main">
+		
+    <div class="units">
+	<form id="quiz" name="quiz">
+	
+	<h1 id="message">Can You Answer These 5 questions?</h1>
+	
+	<div class="unit one">
+	 <h3>Which cube cannot be made based on the unfolded cube?</h3>
+	  <div class="imageQuestion1">
+	   <img src="Images/VisualQuestion1/question.png" alt="photo of question">
+	  </div> 
+	  <div class="imagePosition1">
+	  <ul> 
+	   <li data-key="1"><a href="#main"><img id="img1" src="Images/VisualQuestion1/option1.png" alt="photo of option1"></a></li>
+	   <li data-key="2"><a href="#main"><img id="img2" src="Images/VisualQuestion1/option2.png" alt="photo of option2"></a></li>			<!-- Question1 -->
+	   <li data-key="3"><a href="#main"><img id="img3" src="Images/VisualQuestion1/option3.png" alt="photo of option3"></a></li>
+	  </ul>
+	  </div>
+	</div>
+
+	<div class="unit two">
+	 <h3>What is the color of Donald Duck's bowtie?</h3>
+	   <input type="radio" name="q2" value="a1">Blue<br>
+	   <input type="radio" name="q2" value="a2">Red<br>			<!-- Question2 -->
+	   <input type="radio" name="q2" value="a3">Orange<br>
+	   <input type="radio" name="q2" value="a4">Green
+	</div>
+
+	<div class="unit three">
+	 <h3>What is the 20th element in the periodic table?</h3>
+	   <h4>(Hint: Good for building bones and keeping them healthy.)</h4>			<!-- Question3 -->
+	   <input type="text" name="q3">
+	</div>
+	
+	<div class="unit four">
+	 <h3>What tempurate is the same in Fahrenheit and Celsius?</h3>
+	   <input type="radio" name="q4" value="b1"> 0°<br>
+	   <input type="radio" name="q4" value="b2">-40°<br>			<!-- Question4 -->
+	   <input type="radio" name="q4" value="b3">+100°<br>
+	   <input type="radio" name="q4" value="b4">-50°
+	</div>
+	
+	<div class="unit five">
+	 <h3>Which of these NBA franchises has never signed with Lebron James?</h3>
+	   <input type="radio" name="q5" value="c1">Miami Heat<br>
+	   <input type="radio" name="q5" value="c2">Los Angeles Lakers<br>			<!-- Question5 -->
+	   <input type="radio" name="q5" value="c3">Golden State Warriors<br>
+	   <input type="radio" name="q5" value="c4">Cleveland Cavaliers
+	</div>
+	
+	<div class="unit six">
+	 <h3>Select the figure that is missing from the collection below:</h3>
+  	  <div class="imageQuestion6"> 
+	   <img src="Images/VisualQuestion2/question2.jpg" alt="photo of question">
+	  </div>
+	  <div class="imagePosition6">
+	  <ul> 
+	   <li data-key="4"><a href="#main"><img id="img4" src="Images/VisualQuestion2/opt1.jpg" alt="photo of option1"></a></li>			<!-- Question6 -->
+	   <li data-key="5"><a href="#main"><img id="img5" src="Images/VisualQuestion2/opt2.jpg" alt="photo of option2"></a></li>
+	   <li data-key="6"><a href="#main"><img id="img6" src="Images/VisualQuestion2/opt3.jpg" alt="photo of option3"></a></li>
+	  </ul>
+	  </div>
+	</div>
+	
+	<div class="unit seven">
+	 <h3>Which of these cities is closest to London, UK?</h3>
+	   <input type="radio" name="q7" value="d1">Atlanta, GA<br>
+	   <input type="radio" name="q7" value="d2">Boston, MA<br>			<!-- Question7 -->
+	   <input type="radio" name="q7" value="d3">New York, NY<br> 
+	   <input type="radio" name="q7" value="d4">Miami, FL
+	</div>
+	
+	<div class="unit eight">
+	 <h3>Which country hosted the Summer Olympics in 2016?</h3>
+	   <input type="radio" name="q8" value="e1">Turkey<br>
+	   <input type="radio" name="q8" value="e2">Germany<br> 			<!-- Question8 -->
+	   <input type="radio" name="q8" value="e3">China<br> 
+	   <input type="radio" name="q8" value="e4">Brazil 
+	</div>
+	
+	<div class="unit nine">
+	 <h3>What are the three colors of the Irish Flag?</h3>
+	  <select name="q9">
+	   <option value="op1">Green-White-Red</option>
+	   <option value="op2">White-Blue-Green</option>			<!-- Question9 -->
+	   <option value="op3">Green-White-Orange</option>
+	   <option value="op4">Orange-White-Black</option>
+	  </select>
+	</div>
+	
+	<div class="unit ten">
+	 <h3>What is the largest planet in our Solar System?</h3>
+	   <h4>(Hint: Between the Mars and Saturn.)</h4>			<!-- Question10 -->
+	   <input type="text" name="q10">
+
+	   
+	</div>
+	
+	</form>
+	</div>
+	
+	<div class="pageControl">
+	<button id="nextButton">Next</button><br><br>
+	<button id="previousButton">Previous</button>								<!-- Buttons -->
+	<input id="submitButton" type="button" value="Submit" onclick="result();">
+	</div>
+	
+	</div>
+	
+	
+
+	  <footer>
+		<p>Oguz Sarac, 2988989, oguzsarac0@gmail.com</p>
+
+		  <a href="https://www.instagram.com/srcoguz/">
+		  <img src="Images/instagram.png" alt="Instagram" height="30" width="30">			<!-- Question2 -->
+		  </a>
+		  
+		  <a href="https://plus.google.com/u/0/108159619054311869622">
+		  <img src="Images/google.png" alt="Google+" height="30" width="30">
+		  </a>
+		  
+	  </footer>	
+   </div>
+   <script src="../OguzSarac_298989_js/Javascript/script.js"></script>
+  </body>
+</html>	
